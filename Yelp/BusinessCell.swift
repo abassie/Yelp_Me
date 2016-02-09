@@ -36,12 +36,26 @@ class BusinessCell: UITableViewCell {
         }
     }
     
+    
+    //this code is initialized once the cell becomes awake
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         //this code rounds images
         thumbImageView.layer.cornerRadius = 3
         thumbImageView.clipsToBounds = true
+        
+        
+        //where the label should wrap
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
+    }
+    
+    override func layoutSubviews() {
+        //always call parent function when you override; when parent changes dimension, enact this code
+        super.layoutSubviews()
+        
+        //where the label should wrap
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
