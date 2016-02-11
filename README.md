@@ -39,7 +39,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 Yay for more optionals!!!
 
-Describe any challenges encountered while building the app.
+As a Swift newb, I had to learn my way around the language before I could begin exploring optionals. 
+I implemented two of them this week, which I am super happy about! I had lots of fun making this app.
 
 ## License
 
