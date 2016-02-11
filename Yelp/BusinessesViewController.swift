@@ -34,8 +34,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         
         //set up search bar
         searchBar = UISearchBar()
-        searchBar.barStyle = UIBarStyle.BlackTranslucent
-        searchBar.keyboardAppearance = UIKeyboardAppearance.Dark
+        searchBar.barStyle = UIBarStyle.BlackOpaque
+        searchBar.keyboardAppearance = UIKeyboardAppearance.Light
         searchBar.sizeToFit()
         
         //this line of code brings the search bar into the nav bar
