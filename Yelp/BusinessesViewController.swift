@@ -97,15 +97,30 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     
-    /*
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using segue.destinationViewController.
     // Pass the selected object to the new view controller.
+        
+        let cell = sender as! UITableViewCell
+        
+        //obtain index path from the cell
+        let indexPath = tableView.indexPathForCell(cell)
+        
+        //index into array to get correct movie
+        let business = businesses![indexPath!.row]
+        
+        //where the segue is going; cast the constant as DetailViewController so we can access the movie property of the detail view controller and set it to the movie we created here
+        let DetailsViewController = segue.destinationViewController as! detailsViewController
+        
+        //set the business from DetailViewController = to the movie constant we made here
+        DetailsViewController.business = business
+
     }
-    */
+   
     
     
 }
