@@ -23,6 +23,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -34,9 +36,11 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         
         //set up search bar
         searchBar = UISearchBar()
-        searchBar.barStyle = UIBarStyle.BlackOpaque
         searchBar.keyboardAppearance = UIKeyboardAppearance.Light
         searchBar.sizeToFit()
+        searchBar.barTintColor = UIColor.yellowColor()
+        searchBar.backgroundColor = UIColor.orangeColor()
+        
         
         //this line of code brings the search bar into the nav bar
         navigationItem.titleView = searchBar
@@ -92,6 +96,11 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier("BusinessCell", forIndexPath: indexPath) as! BusinessCell
         
         cell.business = filteredBusinesses[indexPath.item]
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clearColor()
+        
+        cell.selectedBackgroundView = backgroundView
         
         return cell
     }
@@ -149,5 +158,18 @@ extension BusinessesViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
+    //because we are overriding, make sure we call it
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        //use if let because when nothing is selected, there is no index
+        if let indexPath = tableView.indexPathForSelectedRow
+        {
+            //when animated is true, fading action happens
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    
+}
 }
 

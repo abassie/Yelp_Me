@@ -3,11 +3,17 @@
     {
       "idiom" : "iphone",
       "size" : "29x29",
-      "scale" : "2x"
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
       "size" : "29x29",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Yelp-2.png",
       "scale" : "3x"
     },
     {
@@ -22,12 +28,24 @@
     },
     {
       "idiom" : "iphone",
-      "size" : "60x60",
-      "scale" : "2x"
+      "size" : "57x57",
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
+      "size" : "57x57",
+      "scale" : "2x"
+    },
+    {
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Yelp.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Yelp-1.png",
       "scale" : "3x"
     }
   ],
